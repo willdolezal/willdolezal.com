@@ -1,0 +1,55 @@
+Title: Example of Amazon Memo
+Date: 2020-04-03 13:46
+Author: Will Dolezal
+Category: Case Studies
+Tags: amazon, schema, json-ld, seo
+Status: published
+
+
+## Background Context
+
+
+One innovative and impactful tasks I've driven was the adoption of a new development workflow to improve the implementation of schema structured data code on new website builds. Before these adjustments, schema implementation was done directly before or after the website launch. The client would typically handle content entry for the site. Afterward, I would use HTML mark-up within large WYSIWYG content boxes inside the CMS to add the schema code. A lack of content structure made implementation ad hoc at best. The resulting schema code was as fragile as it was time-intensive to implement. I noticed schema implementation set our firm's skill set above other marketing agencies lacking technological capabilities during new business meetings. Feature boxes in search results were appearing more frequently and had high visibility. Information in these boxes often came from content marked up with schema. It was clear to me implementing schema would drastically benefit the performance of our clients in search results. 
+
+Our current method of implementing schema wasn't scalable to a large number of web pages. In researching schema implementation, I found another way of marking up content on a page using JSON-LD code on the page. I ran my idea past a couple of our developers in the lunchroom. They confirmed it would be possible to use multiple content fields in the CMS to populate JSON-LD code on the page. On an upcoming project, I was able to test this idea by collaborating with the developer before they began coding the website. Together we were able to define which pieces of content would need a field. I then provided the developer with JSON-LD templates to inject the predefined content pieces into. The project was for a recruiting firm who would regularly post job listings on their site. These pages received little to no traffic on the old website. After launching the new website, these pages were appearing in search engine feature boxes. One year after launching the site, these page types were outperforming the homepage for traffic and lead acquisition. 
+
+
+<p class="lead">The following text was written in the style of an Amazon memo for use in a theoretical meeting during the above situation.</p>
+
+---
+
+## Embedding Schema During The Development Phase
+
+
+An additional competitive edge within Ackmann & Dickenson's marketplace of web development and marketing firms exists with a minor change to existing procedures. A touchpoint between our talented developers and the digital marketing team will allow the implementation of a technical best practice in free search marketing. Accomplishing this technical best practice is too technical for most marketing firms and too nuanced for most web development companies. Ackmann & Dickenson has a unique position to have in-house talent for both of these areas. The technical best practice opportunity involves the robust and scalable implementation of the schema structured data library.
+
+
+## Growing Importance of Schema on Websites for Search Visibility
+
+A working group of the most significant search engines, Google, Bing, and Yahoo!, came together in 2011 to define a library of structured data "on the Internet, on web pages, in email messages, and beyond."(1) This structured data, also known as schema, is designed for search engine crawlers and other parsers as contextual metadata. The additional context allowed search engines to start introducing new features in their search engine results page. For example, Is a string of numbers on a web page a math equation or a phone number? With context from the schema, search engines can determine with a high level of confidence the string was a phone number. 
+
+Search interest for "Schema.org," the website hosting the structured data library, has grown three-fold from its creation to 2016. (2) New features supplementing traditional organic listings in search results are appearing regularly. Most importantly, these features are commanding a rapidly growing portion of visibility thanks to premium screen real estate. These features are becoming more frequent in search results than paid advertising from AdWords. They have become the new battleground for visibility on search engine results pages. (3)
+
+
+## Current Schema Implementation Method Lacks Scalability and Durability
+
+The Digital Marketing Team at Ackmann & Dickenson has been monitoring this trend. Our pre-launch optimization tasks for new website builds now incorporate the implementation of schema as HTML Microdata. Adding microdata schema can only occur once the client's content is live on the page. Because the schema is wrapped manually around the content in the page editor, any changes or edits to the page introduces a significant risk for a code error. Potential worst-case situations are the content, not loading. Or worse, the page is not loading due to a 4xx page error. Thanks to limited roll-out, pro-active communication, and monitoring user changelogs have prevented these issues from occurring. Manual implementation and maintenance efforts of schema by the Digital Marketing Team cannot scale effectively. The manual nature of the work is labor-intensive. It quickly outweighs net benefits when comparing to the task to other opportunity areas. Additionally, the potential for page errors may result in higher requests for warranty work as clients accidentally break their web pages. A souring of client relationships is likely to follow. 
+
+Luckily, the technical nature of this situation presents a unique opportunity for Ackmann & Dickenson. Other digital marketing firms in our competitive marketplace lack the depth of development staff available at our company. Without strong technical capabilities, many of these firms can only implement schema manually. As previously stated, this method creates notable technical debt and strains client relationships as costs supersede intrinsic and real value. Being flush in development talent is a competitive edge for our company to capitalize on this technical differentiator. I recommend utilizing our technical ability and a new file format on this marketing initiative to the benefit of our clients and company. 
+
+
+## Solve By Integrating Schema Into Page Components
+
+An alternative to wrapping content with fragile HTML schema is the integration of the JSON-LD schema code. JSON-LD doesn't require wrapping on-page content. The schema code only needs to match visible content on the page to perform in search results. Referencing the page's content fields creates the JSON-LD schema during page load. Because the schema needs to hook in the page's content, the JSON-LD code needs to live in the page template. The creation of multiple fields is necessary for each piece of unique content used in the schema. For example, instead of one field for address, four fields are required for the street address, city, state, and ZIP code each has a schema property. Formatting this content with CSS will also be necessary, replacing previous HTML styling methods. Development costs to satisfy these requirements will be minuscule to the full website development cost when done at the forefront of a project. Additionally, the creation of specific form fields will help guide the end-user.
+
+Collaboration between digital marketing and development stakeholders during the design hand-off phase of a website project is critical. The Digital Marketing stakeholder will work to identify what pieces of on-page content requires schema mark-up. This will be a collaborative process with the development stakeholder and result in the Digital Marketing stakeholder providing a JSON-LD code template for the developer to integrate and create content fields around. Having this collaboration before any development begins is paramount to prevent any rewriting of the codebase, and the site exceeds best practices. Identifying potential design and development issues earlier on and smoother hand-offs between departments are additional benefits from these collaborations. 
+
+The integration of JSON-LD schema into the website drives on-going value to the customer as their site grows with new content and pages. Long-term website performance and client relationships will show significant benefits. The Digital Marketing Team will be able to focus their efforts on other opportunities, driving more value to the client at less cost. The development team will spend less time on warranty work fixing client missteps. 
+
+---
+
+## References
+
+- https://en.wikipedia.org/wiki/Schema.org
+- https://trends.google.com/trends/explore?date=all&geo=US&q=%2Fm%2F0gvvdn9
+- https://moz.com/mozcast/features
