@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{ category }} Articles | {{ SITENAME }}
+{% endblock %}
+
+{% block page_header %}
+  {{ category }}
+{% endblock %}
+
+{% block content %}
+  
+{% if articles %}
+      <ul class="list-unstyled">
+          <hr>
+      {% for article in (articles_page.object_list if articles_page else articles) %}
+          <li class="pt-5">
+            <h5><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h5>
+            <li class="list-inline-item">
+              <i class="fas fa-clock"></i> On:{{ article.locale_date }}
+              {% if article.tags %}
+                <i class="fas fa-tag"></i>
+                {% for tag in article.tags %}
+                  #{{ tag }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </li>
+            {% endif %}
+            {% if DISPLAY_SUMMARY and article.summary|length > 0 %}
+              <i>{{ article.summary }}</i>
+            {% endif %}
+          </li>
+      {% endfor %}
+      </ul>
+  {% endif %}
+
+{% endblock %}

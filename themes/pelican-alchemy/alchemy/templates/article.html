@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block head %}
+  {{ super() }}
+  <meta name="description" content="{{ article.summary|striptags }}">
+{% endblock %}
+
+{% block title %}
+  {{ article.title|striptags }} {{ super() }}
+{% endblock %}
+
+{% block page_header %}
+  {% if article.link %}
+    <a href="{{ article.link }}" rel="bookmark">
+  {% endif %}
+  {{ article.title }}
+  {% if article.link %}
+    <i class="fas fa-link"></i></a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="{{ article.date.isoformat() }}">
+          <i class="fas fa-clock"></i>
+          {{ article.locale_date }}
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+        </li>
+        {% if article.tags %}
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+            {% for tag in article.tags %}
+              #{{ tag }}{% if not loop.last %}, {% endif %}
+            {% endfor %}
+          </li>
+        {% endif %}
+        {% if article.translations %}
+          <li class="list-inline-item">
+            <i class="fas fa-globe"></i>
+            {% for translation in article.translations %}
+              <a href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a>
+            {% endfor %}
+          </li>
+        {% endif %}
+      </ul>
+    </header>
+    {% if article.logo %}<img class="image-process-logo" src="{{ SITEURL }}/images/{{ article.logo }}"/>{% endif %}
+    <div class="content py-4">
+      {{ article.content }}
+      {% if article.link %}
+        <p class="link-button"><a href="{{ article.link }}" rel="bookmark">
+          <i class="fas fa-link"></i> view link
+        </a></p>
+      {% endif %}
+    </div>
+  </article>
+  {% include 'include/comments.html' %}
+{% endblock %}

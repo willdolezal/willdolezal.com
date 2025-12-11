@@ -1,0 +1,44 @@
+{%- macro fa(icon) -%}
+{%- set fa_special_icons = {
+  "feed": "fas fa-rss",
+  "rss": "fas fa-rss",
+} -%}
+{%- if icon in fa_special_icons -%}
+{{ fa_special_icons[icon] }}
+{%- elif icon.split()|select("in", ["fab", "fas", "far", "fal", "fad"])|list -%}
+{{ icon }}
+{%- else -%}
+fab fa-{{icon}}
+{%- endif -%}
+{%- endmacro -%}
+<div class="row">
+  <div class="col-sm-6">
+    <h1 class="h1"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+    {% if SITESUBTITLE %}
+      <p class="text-muted">{{ SITESUBTITLE }}</p>
+    {% endif %}
+  </div>
+  <div class="col-sm-6">
+    {% if LINKS or (DISPLAY_PAGES_ON_MENU and pages) or ICONS %}
+    <ul class="list-inline">
+        {% for title, link in LINKS %}
+          <li class="list-inline-item"><a href="{{ url(link) }}" target="_self">{{ title }}</a></li>
+        {% endfor %}
+        {% if DISPLAY_PAGES_ON_MENU %}
+          {% for page in pages %}
+            {% if LINKS and loop.first %}
+              <li class="list-inline-item text-muted">|</li>
+            {% endif %}
+            <li class="list-inline-item"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+          {% endfor %}
+        {% endif %}
+        {% for icon, link in ICONS %}
+          {% if (LINKS or (DISPLAY_PAGES_ON_MENU and pages)) and loop.first %}
+            <li class=" list-inline-item text-muted">|</li>
+          {% endif %}
+          <li class="list-inline-item"><a class="{{ fa(icon) }}" href="{{ url(link) }}" target="_blank"></a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>
