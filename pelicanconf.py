@@ -64,8 +64,8 @@ SITEMAP = {"format": "xml","priorities":{"articles": 0.5,"indexes": 0.5,"pages":
 # HEADER LINKS FOR TOP NAVIGATION BAR
 LINKS = (
     ("About Me", "/#about-me"),
-    ("Case Studies", "/category/case-studies.html"),
-    ("Projects", "/category/projects.html"),
+    ("Case Studies", "/category/case-studies"),
+    ("Projects", "/category/projects"),
 )
 
 # Social widget
@@ -76,14 +76,14 @@ SOCIAL = (
 
 
 #CLEANUP URLS
-#ARTICLE_URL = '{slug}/'
-#ARTICLE_SAVE_AS = '{slug}/index.html'
-#PAGE_URL = '{slug}/'
-#PAGE_SAVE_AS = '{slug}/index.html'
-#CATEGORY_URL = "category/{slug}/"
-#CATEGORY_SAVE_AS = "category/{slug}/index.html"
-#CATEGORIES_URL = "category/"
-#CATEGORIES_SAVE_AS = "category/index.html"
+ARTICLE_URL = '{slug}/'
+ARTICLE_SAVE_AS = '{slug}/index.html'
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
+CATEGORY_URL = "category/{slug}/"
+CATEGORY_SAVE_AS = "category/{slug}/index.html"
+CATEGORIES_URL = "category/"
+CATEGORIES_SAVE_AS = "category/index.html"
 
 
 #DEVELOPMENT SETTINGS
