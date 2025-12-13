@@ -11,7 +11,7 @@ DEFAULT_PAGINATION = False
 HIDE_AUTHORS = True
 
 #Shift location of particular files
-STATIC_PATHS = ["extra/CNAME","extra/favicon.ico"]
+STATIC_PATHS = ['extra/CNAME','extra/favicon.ico','images']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     "extra/favicon.ico": {"path":"favicon.ico"},
